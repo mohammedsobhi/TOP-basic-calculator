@@ -43,8 +43,9 @@ function clearDisplay() {
 }
 //  removes the last digit to act as backspace
 function removeLastDigit() {
-  displayValue = displayValue.slice(0, -1);
-  updateDisplayValue();
+  display.textContent = display.textContent.slice(0, -1);
+  displayValue = display.textContent;
+  if (displayValue === "") display.textContent = "0";
 }
 
 // operators functions
